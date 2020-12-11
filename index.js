@@ -41,9 +41,14 @@ function Music(key) {  //key is a property of keypress
             audio.play(); 
             break;        
   }
-     
+}     
 //Button animation
-
-document.querySelector(".drum").classList.add(".pressed");
+function buttonAnimation(currentKey) {
+        var activeBtn = document.querySelector("."+ currentKey);
+        activeBtn.classList.add("pressed");
+        setTimeout(function(){ 
+                activeBtn.classList.remove("pressed");
+         }, 500); //500ms
 
 }
+
